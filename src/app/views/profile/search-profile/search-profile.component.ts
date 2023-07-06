@@ -35,7 +35,6 @@ export class SearchProfileComponent implements OnInit, OnDestroy {
         takeUntil(this.onDestroy$)
       )
       .subscribe(() => {
-        console.log(this.profileCtrl.value);
         this.getListOfUsers(this.profileCtrl.value || '', 20);
     });
   }
@@ -48,7 +47,7 @@ export class SearchProfileComponent implements OnInit, OnDestroy {
           return of(err);
         })
       )
-      .subscribe(({ data }) => {        // this.profile = data;
+      .subscribe(({ data }) => {
         this.filteredProfile = data;
       });
   }
