@@ -12,14 +12,14 @@ import { NgxLoadingModule, ngxLoadingAnimationTypes } from "ngx-loading";
     FormsModule,
     AsyncPipe,
     FlexLayoutModule,
-     NgxLoadingModule.forRoot({
-      animationType: ngxLoadingAnimationTypes.wanderingCubes,
-      backdropBackgroundColour: "rgba(0,0,0,0.1)",
-      backdropBorderRadius: "4px",
-      primaryColour: "#ffffff",
-      secondaryColour: "#ffffff",
-      tertiaryColour: "#ffffff",
-     }),
+    //  NgxLoadingModule.forRoot({
+    //   animationType: ngxLoadingAnimationTypes.wanderingCubes,
+    //   backdropBackgroundColour: "rgba(0,0,0,0.1)",
+    //   backdropBorderRadius: "4px",
+    //   primaryColour: "#ffffff",
+    //   secondaryColour: "#ffffff",
+    //   tertiaryColour: "#ffffff",
+    //  }),
   ],
   providers: [],
   exports: [
@@ -27,7 +27,7 @@ import { NgxLoadingModule, ngxLoadingAnimationTypes } from "ngx-loading";
     FormsModule,
     AsyncPipe,
     FlexLayoutModule,
-    NgxLoadingModule,
+    // NgxLoadingModule,
   ],
 })
 export class SharedModule {}
