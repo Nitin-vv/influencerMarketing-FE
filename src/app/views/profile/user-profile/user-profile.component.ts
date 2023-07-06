@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Subject, catchError, map, of, takeUntil } from 'rxjs';
 import { Profile } from 'src/app/shared/models';
 import { CommonService } from 'src/app/shared/services/common.service';
@@ -15,7 +16,7 @@ export class UserProfileComponent implements OnInit, OnDestroy {
   userContacts: any = null;
   private onDestroy$ = new Subject<void>();
   isloading: boolean = false;
-  constructor(public commonService: CommonService, private userSevice: UserProfileService) {
+  constructor(public commonService: CommonService, private userSevice: UserProfileService, private sanitize: DomSanitizer) {
 
   }
   ngOnDestroy() {
@@ -69,5 +70,9 @@ export class UserProfileComponent implements OnInit, OnDestroy {
       .subscribe(({ user_profile }) => {   
         this.userContacts = user_profile?.contacts;
       });
+  }
+
+  sanitizevalue(url: string) {
+    return this.sanitize.bypassSecurityTrustUrl(url);
   }
 }

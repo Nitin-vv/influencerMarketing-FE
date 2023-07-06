@@ -24,7 +24,7 @@
 }
 
 .post-card {
-    width: 618px;
+    width: 448px;
 }
 
 .card-item {
@@ -77,7 +77,7 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
 }
 
@@ -105,3 +105,8 @@
         justify-content: space-around;
     }
 }
+
+.display-img {
+    height: 310px;
+}
+  

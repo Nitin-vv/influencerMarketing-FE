@@ -1,0 +1,13 @@
+{
+    "/api": {
+      "target": "https://scontent-lga3-2.cdninstagram.com",
+      "secure": true,
+      "changeOrigin": true
+    },
+    "/images": {
+      "target": "https://scontent-lga3-2.cdninstagram.com",
+      "secure": true,
+      "changeOrigin": true
+    }
+  }
+  

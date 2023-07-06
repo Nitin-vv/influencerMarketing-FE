@@ -17,7 +17,7 @@ export class UserProfileService {
 
   getHttpHeaders() {
     return new HttpHeaders({
-      authKey: `testtest`,
+      authKey: `hWuFhhPVij`,
       'Content-Type': 'application/json',
       Accept: 'application/json',
     });

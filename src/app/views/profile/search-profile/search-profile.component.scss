@@ -18,3 +18,9 @@
     margin-right: 0;
     margin-left: 8px;
 }
+
+::ng-deep .option .mdc-list-item__primary-text {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

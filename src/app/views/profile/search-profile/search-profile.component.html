@@ -7,10 +7,14 @@
             <mat-label>Search</mat-label>
             <input matInput aria-label="Search" [matAutocomplete]="auto" [formControl]="profileCtrl">
             <mat-autocomplete #auto="matAutocomplete">
-                <mat-option *ngFor="let profile of filteredProfile" [value]="profile?.fullname" (click)="onOptionSelected(profile)">
-                    <img alt="" class="example-option-img " [src]="profile.picture" height="25">
-                    <span>{{profile?.fullname}}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <small>{{formatNumber(profile.followers)}}</small>
+                <mat-option class="option" *ngFor="let profile of filteredProfile" [value]="profile?.fullname" (click)="onOptionSelected(profile)">
+                    <div>
+                        <img alt="" class="example-option-img " [src]="profile.picture" height="25">
+                        <span>{{profile?.fullname}}</span>
+                    </div>
+                    <div>
+                        <span>{{formatNumber(profile.followers)}}</span>
+                    </div>
                 </mat-option>
             </mat-autocomplete>
             <mat-icon matPrefix>search</mat-icon>

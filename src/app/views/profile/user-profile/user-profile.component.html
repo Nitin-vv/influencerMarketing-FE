@@ -32,15 +32,6 @@
                             <span class="sub-heading">{{userDetails?.fullname}}</span>
                         </div>
                     </div>
-                    <!-- <div fxLayout="row" fxLayout.lt-sm="column">
-                        <div fxFlex="25" class="pr-1">
-                            CUFF IT
-                        </div>
-                        <div fxFlex="25" class="pr-1">
-                            season
-                        </div>
-                    </div> -->
-
                     <div fxLayout="row" fxLayout.lt-sm="column" *ngFor="let item of userContacts">
                         <span *ngIf="item?.type == 'email'">{{item?.formatted_value}}</span>
                         <span *ngIf="item?.type != 'email'">
@@ -61,13 +52,12 @@
         <div class="justify-center grid" >
             <div *ngFor="let item of userFeeds">
                 <mat-card class="mat-card post-card">
-                    <img mat-card-image [src]="item?.display_url" [alt]="item?.display_url" *ngIf="item?.media_type == 1">
+                    <img mat-card-image class="display-img" crossorigin="anonymous" [src]="sanitizevalue(item?.display_url)"  [alt]="item?.display_url" *ngIf="item?.media_type == 1">
                     <video controls *ngIf="item?.media_type == 2" class="video-frame">
                         <source [src]="item?.video_url" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <svg *ngIf="item?.media_type == 2" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="30px" height="30px"><path d="M13.34 4.13L20.26 16H4v-1C4 9.48 8.05 4.92 13.34 4.13zM33.26 16L22.57 16 15.57 4 26.26 4zM46 15v1H35.57l-7-12H35C41.08 4 46 8.92 46 15zM4 18v17c0 6.08 4.92 11 11 11h20c6.08 0 11-4.92 11-11V18H4zM31 32.19l-7.99 4.54C21.68 37.49 20 36.55 20 35.04v-9.08c0-1.51 1.68-2.45 3.01-1.69L31 28.81C32.33 29.56 32.33 31.44 31 32.19z"/></svg>
-                    <!-- <mat-icon class="media-type-icon" *ngIf="item?.media_type == 1">favorite</mat-icon> -->
                     <img class="media-type-icon" *ngIf="item?.media_type == 1" width="30" height="30" src="https://img.icons8.com/material/24/FFFFFF/gallery.png" alt="gallery"/>
                     <mat-card-content class="justify-center card-item only-on-hover">
                         <div class="on-hover">
