@@ -1,0 +1,107 @@
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.blue-tick-icon {
+    font-size: 21px;
+    color: #39a1f5;
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blue-tick {
+    display: inline-block;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.post-card {
+    width: 618px;
+}
+
+.card-item {
+    position: absolute;
+    color: white;
+    top: 50%;
+    bottom: 50%;
+    right: 52%;
+    left: 35%;
+    font-size: 20px;
+}
+
+.on-hover {
+    display: flex;
+    gap: 25px;
+}
+
+.message-icon {
+    transform: scaleX(-1);
+}
+
+.only-on-hover {
+    display: none;
+}
+
+.post-card:hover {
+    cursor: pointer;
+    .only-on-hover {
+        display: block;
+    }
+}
+
+
+.header {
+    display: flex;
+    justify-content: inherit;
+}
+
+.video-frame {
+    height: 310px;
+}
+
+.media-type-icon,svg {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 26px;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .post-card {
+        width: 250px;
+    }
+    .header {
+        justify-content: space-evenly;
+    }
+  }
+  
+  /* Media query for even smaller screens */
+  @media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .post-card {
+        width: 335px;
+    }
+    .header {
+        justify-content: space-around;
+    }
+}

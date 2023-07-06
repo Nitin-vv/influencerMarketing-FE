@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.justify-center {
+    justify-content: center;
+}
+
+.mat-card {
+    width: 100%;
+    background: #fbfbff !important;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.profile-links {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.sub-heading {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.shadow-none {
+    box-shadow: none !important;
+    padding-bottom: 36px;
+}
+
+.d-flex {
+    display: flex;
+}
