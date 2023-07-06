@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { NgxLoadingModule, ngxLoadingAnimationTypes } from "ngx-loading";
 
 
 @NgModule({
